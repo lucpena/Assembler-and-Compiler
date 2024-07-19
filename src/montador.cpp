@@ -1,8 +1,6 @@
 /*
-	Propriedade intelectual de Lucas Araújo Pena.
-
-*/
-
+ *	Lucas Araújo Pena - 13/0056162
+ */
 
 #include "../headers/system.hpp"
 
@@ -14,7 +12,7 @@ int main( int argc, char *argv[] )
 
 	if( argc < 2) 
 	{
-		cout << "\n\tUsando o montador: ./montador arquivo [-enter|-fast]" << endl;
+		cout << "\n\tUsando o montador: ./montador [-o|-p] arquivo [-enter|-fast]" << endl;
 		return -1;
 	}
 
@@ -77,6 +75,8 @@ int main( int argc, char *argv[] )
 				// Remove comentarios
 				if (line.find(";") != string::npos)
 					line = line.substr(0, line.find(";"));
+
+				// TODO: Se for COPY, checar se tem um espaço entre virgulas
 
 				// Remove tabulacoes
 				line.erase(std::remove(line.begin(), line.end(), '\t'), line.end());

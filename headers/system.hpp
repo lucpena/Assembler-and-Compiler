@@ -57,7 +57,7 @@ vector<string> validInstructions =
 
 vector<string> directives = 
     {"BEGIN", "SECTION", "CONST", 
-    "END", "EXTERN", "PUBLIC", "SPACE"};
+    "END", "EXTERN", "PUBLIC", "SPACE", "EQU", "IF"};
 
 vector<string> sessions = {"NONE", "TEXT", "DATA"};
 
